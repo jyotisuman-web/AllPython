@@ -1,0 +1,13 @@
+year=int(input("write the year : "))  
+if year%4 == 0:
+   if year%100 == 0:
+     if year %400 == 0:
+       print("{0} is a leap year".format(year))
+     else: 
+       print("{0} is not a leap year".format(year))
+   else: 
+    print("{0} is a leap year".format(year))
+else: 
+    print("{0} is not a leap year".format(year)
+
+#number such as 1900 is divisible by 4 but is not a leap year, so we also divide the number by 400 .

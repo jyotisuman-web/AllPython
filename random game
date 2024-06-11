@@ -1,0 +1,24 @@
+import random
+def getans(ans):
+    if ans==1:
+        return 'hello'
+    elif ans==2:
+        return 'how are you'
+    elif ans==3:
+        return 'i am fine and you'
+    elif ans==4:
+        return 'be happy'
+    elif ans==5:
+        return 'stop procrastination'
+    elif ans==6:
+        return 'have a faith in god'
+    elif ans==7:
+        return 'you will receive what you want'
+    elif ans==8:
+        return 'and if not get it with your hardwork'
+    else:
+        return 'have a faith in yourself'
+r=random.randint(1,9)
+getans(r)
+print(getans(r))
+

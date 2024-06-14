@@ -1,0 +1,72 @@
+#matrix
+Row=int(input("enter the number of rows: "))
+Column=int(input("enter the number of column: "))
+matrix=[]
+print("enter the elemenrs row wise")
+for row in range(Row):
+    a=[]
+    for column in range(Column):
+        a.append(int(input()))
+    matrix.append(a)
+for row in range(Row):
+    for column in range(Column):
+        print(matrix[row][column],end=" ")
+    print()
+
+#list compresion
+matrix=[[column for column in range(4)]for row in range(4)]
+print(matrix)
+
+#changing value
+matrix=[[1,2],[3,4]]
+r=c=1
+matrix[r][c]=12
+print(matrix)
+
+matrix=[[1,2],[3,4]]
+r=-1
+c=-1
+matrix[r][c]=12
+print(matrix)
+
+#addition
+x=[[1,2],[3,4]] # time and space n*n
+y=[[4,3],[2,1]]
+for i in range(len(x)):
+    for j in range(len(x[0])):
+        x[i][j]=x[i][j]+y[i][j]
+print(x)
+
+#addition and substraction using list comp
+x=[[1,2],[3,4]] # time and space n*n
+y=[[4,3],[2,1]]
+
+add_matrix=[[x[i][j]+y[i][j] for j in range(len(x[0]))]for i in range(len(x))]
+sub_marix=[[x[i][j]-y[i][j] for j in range(len(x[0]))]for i in range(len(x))]
+print("add")
+for r in add_matrix:
+    print(r)
+print("\nsub")
+for r in sub_marix:
+    print(r)
+
+#multiplication and division
+x=[[1,2],[3,4]] # time and space n*n
+y=[[4,3],[2,1]]
+mul_matrix=[[x[i][j]*y[i][j] for j in range(len(x[0]))]for i in range(len(x))]
+div_marix=[[x[i][j]//y[i][j] for j in range(len(x[0]))]for i in range(len(x))]
+print("multiply")
+for r in mul_matrix:
+    print(r)
+print("\ndivide")
+for r in div_marix:
+    print(r)
+
+#new matrix store the transpose ele
+x=[[1,2],[3,4]] # time and space n*n
+res=[[0,0],[0,0]]
+for i in range(len(x)):
+    for j in range(len(x[0])):
+        res[j][i]=x[i][j]
+print(res)
+             
